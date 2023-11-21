@@ -1,0 +1,105 @@
+{
+    "position": "top",
+    "mod": "dock",
+    "ipc": true,
+    "modules-left": ["custom/arch", "sway/workspaces", "sway/window"],
+    "modules-center": [],
+    "modules-right": ["tray", "custom/cpu", "cpu", "custom/memory", "memory", "custom/pulseaudio", "pulseaudio", "clock"],
+    
+    "custom/arch": {
+	"tooltip": false,
+        "format": "󰣇",
+        "on-click": "footclient"
+    },
+
+    "image": {
+	"tooltip": false,
+        "path": "~/arch.png",
+	"size": 128,
+	"on-click": "footclient"
+    },
+
+    "sway/workspaces": {
+        "tooltip": false,
+	"format": "{icon}",
+        "format-icons": {
+            "1": "Sys",
+            "2": "www",
+            "3": "Chat",
+	    "4": "Misc"
+        },
+	"persistent-workspaces": {
+	    "1": [],
+	    "2": [],
+	    "3": [],
+	    "4": []
+	},
+        "all-outputs": true,
+        "disable-scroll": true,
+        "on-click": "activate"
+    },
+    
+    "sway/window": {
+        "tooltip": false,
+        "format": "{app_id}",
+        "max-length": 100
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+   
+    "custom/cpu": {
+	"tooltip": false,
+        "format": "CPU:"
+    },
+    "cpu": {
+        "tooltip": false,
+        "interval": 1,
+        "format": "{usage}%"
+    },
+
+    "custom/memory": {
+	"tooltip": false,
+        "format": "Memory:"
+    },
+    "memory": {
+        "tooltip": false,
+        "interval": 1,
+        "format": "{percentage}%"
+    },
+
+    "custom/pulseaudio": {
+	"tooltip": false,
+        "format": "Volume:"
+    },
+    "pulseaudio": {
+	"tooltip": false,
+        "format": "{volume}%",
+	"format-bluetooth": "{volume}%",
+	"format-muted": "Mute"
+    },
+
+    "custom/battery": {
+	"tooltip": false,
+        "format": "Battery:"
+    },
+    "battery": {
+   	"tooltip": false,
+	"format": "{capacity}%"
+    },
+
+    "clock": {
+        "tooltip": false,
+        "format": "{:%y-%m-%d %H:%M}"
+    },
+
+    "network": {
+        "interval": 1,
+        "tooltip": false,
+        "format": " {bandwidthDownBits}  {bandwidthUpBits}",
+        "format-disconnected": "No Internet 󰤮"
+    }
+
+}

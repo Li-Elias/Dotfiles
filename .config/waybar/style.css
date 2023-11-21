@@ -1,0 +1,71 @@
+@define-color background #2e3440;
+@define-color light-background #3a4253;
+@define-color foreground #e1e3e7;
+@define-color white #ffffff;
+@define-color blue #88c0d0;
+
+* {
+    font-family: "sans", "JetBrainsMono Nerd Font";
+    font-size: 18px;
+    color: @foreground;
+    padding-bottom: 0px;
+}
+
+window#waybar {
+    background: @light-background;
+}
+
+#custom-cpu,
+#custom-memory,
+#custom-pulseaudio,
+#custom-battery {
+    background: @background;
+    color: @blue;
+    padding-left: 10px;
+    padding-right: 4px
+}
+
+#cpu,
+#memory,
+#pulseaudio,
+#battery {
+    background: @background;
+    padding-right: 10px;
+}
+
+#clock,
+#custom-arch {
+    background: @blue;
+    color: @background;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#custom-arch {
+    font-size: 25px;
+    padding-right: 14px;
+}
+
+#window {
+    padding-left: 10px;
+}
+
+#workspaces button {
+    background: @background;
+    border: none;
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 0px;
+    padding-right: 6px;
+    box-shadow: none;
+}
+
+#workspaces button.focused {
+    background: @light-background;
+    border-bottom: 5px solid @blue;
+}
+
+#workspaces button:hover {
+    text-shadow: none;
+}
