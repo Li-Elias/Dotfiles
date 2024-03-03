@@ -1,0 +1,7 @@
+export GOPATH=$HOME/go
+
+export PATH="$HOME/.local/go/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
+
+# export PATH="$HOME/.config/tmux:$PATH"
+# bindkey -s ^f "tmux-sessionizer\n"
